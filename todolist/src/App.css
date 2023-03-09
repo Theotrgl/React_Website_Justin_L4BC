@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+header {
+  background-color: #e45959;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex-wrap: wrap;
+}
+header h3{
+  align-self:auto;
+  margin-right:70%;
+}
+.info{
+  display:flex;
+  flex-direction:column;
+  font-size:medium;
+  height:1px;
+  align-items: baseline;
+}
+body{
+  background-color: #282c34;
+  min-height: 200vh;
+}
