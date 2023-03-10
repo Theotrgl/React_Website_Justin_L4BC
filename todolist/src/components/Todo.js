@@ -29,15 +29,15 @@ const Todo = ({todos, setTodos, setEditTodo}) => {
                     <input type="text" value={todo.title} class={`list ${todo.completed ? "complete" : ""}`} onChange={(event)=> event.preventDefault()}/>
                     <div>
                         <button class="Complete" onClick={()=>Complete(todo)}>
-                            <i class="Check"></i>
+                            <i class="Check">Done</i>
                         </button>
 
                         <button class="Edit" onClick={()=>Edit(todo)}>
-                            <i class="edit"></i>
+                            <i class="edit">Edit</i>
                         </button>
 
                         <button class="Delete" onClick={()=> Delete(todo)}>
-                            <i class="delete"></i>
+                            <i class="delete">Delete</i>
                         </button>
                     </div>
                 </li>

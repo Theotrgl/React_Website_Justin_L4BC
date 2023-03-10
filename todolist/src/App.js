@@ -5,24 +5,24 @@ import Todo from "./components/Todo";
 import './App.css';
 
 const App= ()=>{
-  const[Input, setInput] = useState("");
+  const[input, setInput] = useState("");
   const[todos, setTodos] = useState([/*initialState*/]);
   const[editTodo, setEditTodo] = useState(null);
 
-  return(
+  document.title = "To Do List";
+
+  return( 
     <div class="container">
-      <div class="wrapper">
-        <div>
-          <Header/>
-        </div>
-        <div>
-          <Form input={Input} setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
-        </div>
-        <div>
-          <Todo todos={todos} setTodos={setTodos} setEditTodo={setEditTodo}/>
+      <Header/>
+        <div class="wrapper">
+          <div class="forms">
+            <Form input={input} setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
+          </div>
+          <div class="list">
+            <Todo todos={todos} setTodos={setTodos} setEditTodo={setEditTodo}/>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
