@@ -1,28 +1,25 @@
-import React, {useState, /*useEffect*/} from "react";
-import Header from "./components/Header";
-import Form from "./components/Form";
-import Todo from "./components/Todo";
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Reset from "./components/Reset";
+import Dashboard from "./components/Dashboard";
 
 const App= ()=>{
-  const[input, setInput] = useState("");
-  const[todos, setTodos] = useState([/*initialState*/]);
-  const[editTodo, setEditTodo] = useState(null);
-
   document.title = "To Do List";
 
   return( 
-    <div class="container">
-      <Header/>
-        <div class="wrapper">
-          <div class="forms">
-            <Form input={input} setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
-          </div>
-          <div class="list">
-            <Todo todos={todos} setTodos={setTodos} setEditTodo={setEditTodo}/>
-          </div>
-        </div>
-      </div>
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/reset" element={<Reset />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

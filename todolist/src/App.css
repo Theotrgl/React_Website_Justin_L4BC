@@ -27,7 +27,7 @@ header h3{
   flex-direction:column;
   font-size:medium;
   align-items: baseline;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .container {
@@ -136,4 +136,16 @@ input {
 .Delete:hover{
   transition:200ms;
   font-size: 13px;
+}
+
+.logout__btn {
+  width:70px;
+  height:30px;
+  outline: none;
+  cursor: pointer;
+  background-color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  border:1px solid #d41313;
+  color:white;
 }
